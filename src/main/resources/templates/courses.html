@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Courses</title>
+
+</head>
+
+<body>
+
+	<h1>A List of Courses</h1>
+
+	<div th:each="course: ${courses}">
+
+		<a th:href="@{/course(id=${course.id})}" th:text="${course.name}"></a>
+
+	</div>
+
+</body>
+</html>
